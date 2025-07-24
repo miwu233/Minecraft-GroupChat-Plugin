@@ -1,0 +1,4 @@
+joinMessage: "§d欢迎§e%player%§a加入Slient！"
+quitMessage: "§7人生自古谁无死 遗憾的 §e%player%§c离开了。"
+broadcastMessage: "§b服务器QQ群627489610 可以加入我们的大家庭聊天哦~"
+deathMessage: "§d你死啦！小心一点哦~ 冷知识 聊天栏输入“/back”可以回到死亡的位置"
