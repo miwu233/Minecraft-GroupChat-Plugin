@@ -1,5 +1,4 @@
-
-全部指令输入/message查看
-All command input/message view
-
+测试服务器用的Minecraft 1.21版本
+理论上来说1.13版本及以上应该都适用
+这个插件无聊写着玩的
 不喜勿喷

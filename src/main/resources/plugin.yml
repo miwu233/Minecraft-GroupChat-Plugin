@@ -1,9 +1,10 @@
-name: Message
-version: '1.0-SNAPSHOT'
+name: SLMessage
+version: '3.1'
 main: com.Message.Message
 api-version: '1.21'
 author: Bicd
-description: 玩家进出服务器提示插件
+description: 服务器消息插件
+
 commands:
   setjoinmsg:
     description: 设置欢迎消息
@@ -17,71 +18,85 @@ commands:
     description: 设置广播内容
     usage: /setbroadcast <消息内容>
     permission: message.admin
+  broadcastnow:
+    description: 立即发送一条广播
+    usage: /broadcastnow <内容>
+    permission: message.admin
   broadcaststart:
     description: 开始定时广播
     usage: /broadcaststart <秒数>
     permission: message.admin
-  x:
+  broadcaststop:
     description: 停止定时广播
     usage: /broadcaststop
     permission: message.admin
-permissions:
-  message.admin:
-    description: 管理插件的权限
-    default: op
-    setdeathmsg:
-      description: 设置死亡私聊消息
-      usage: /setdeathmsg <消息内容>
-      permission: message.admin
-      setdeathreset:
-        description: 设置玩家重进后是否重置死亡提示
-        usage: /setdeathreset <on|off>
-        permission: message.admin
-        mute:
-          description: 禁言玩家
-          usage: /mute <玩家名> <时间>
-          permission: message.admin
-          unmute:
-            description: 解除禁言
-            usage: /unmute <玩家名>
-            permission: message.admin
-            fakechat:
-              description: 伪装玩家发言
-              usage: /fakechat <玩家名> <内容>
-              permission: shitplugin.admin
-              commands:
-                creategroup:
-                  description: 创建群聊
-                  usage: /creategroup <群名>
-                invitegroup:
-                  description: 邀请玩家进群
-                  usage: /invitegroup <群名> <玩家名>
-                joingroup:
-                  description: 加入群聊
-                  usage: /joingroup <群名>
-                leavegroup:
-                  description: 退出群聊
-                  usage: /leavegroup
-                kickgroup:
-                  description: 踢出群聊成员
-                  usage: /kickgroup <群名> <玩家名>
-                grouplist:
-                  description: 查看所有群聊
-                  usage: /grouplist
-                groupmsg:
-                  description: 群聊发言
-                  usage: /groupmsg <消息>
-              setadmin:
-                description: 任命管理员
-                usage: /setadmin <群名> <玩家名>
-                unsetadmin:
-                  description: 撤销管理员
-                  usage: /unsetadmin <群名> <玩家名>
-                  commands:
-                    helpmsg:
-                      description: 显示群聊插件指令指南
-                      usage: /helpmsg
-                      message:
-                        description: 查看全部指令
-                        usage: /message
-                        permission: message.admin
+  setdeathmsg:
+    description: 设置死亡私聊消息
+    usage: /setdeathmsg <消息内容>
+    permission: message.admin
+  setdeathreset:
+    description: 设置玩家重进后是否重置死亡提示
+    usage: /setdeathreset <on|off>
+    permission: message.admin
+  mute:
+    description: 禁言玩家
+    usage: /mute <玩家名> <时间> <原因>
+    permission: message.admin
+  unmute:
+    description: 解除禁言
+    usage: /unmute <玩家名>
+    permission: message.admin
+  fakechat:
+    description: 伪装玩家发言
+    usage: /fakechat <玩家名> <内容>
+    permission: message.admin
+  creategroup:
+    description: 创建群聊
+    usage: /creategroup <群名>
+  invitegroup:
+    description: 邀请玩家进群
+    usage: /invitegroup <群名> <玩家名>
+  joingroup:
+    description: 加入群聊
+    usage: /joingroup <群名>
+  leavegroup:
+    description: 退出群聊
+    usage: /leavegroup
+  switchgroup:
+    description: 切换当前活跃群聊
+    usage: /switchgroup <群名>
+  kickgroup:
+    description: 踢出群聊成员
+    usage: /kickgroup <群名> <玩家名>
+  grouplist:
+    description: 查看所有群聊
+    usage: /grouplist
+  groupmsg:
+    description: 群聊发言
+    usage: /groupmsg <消息>
+  setadmin:
+    description: 任命管理员
+    usage: /setadmin <群名> <玩家名>
+  unsetadmin:
+    description: 撤销管理员
+    usage: /unsetadmin <群名> <玩家名>
+  helpmsg:
+    description: 显示群聊插件指令指南
+    usage: /helpmsg
+  message:
+    description: 查看全部指令
+    usage: /message
+    permission: message.admin
+  grouphistory:
+    description: 查看当前群聊历史消息（可分页）
+    usage: /grouphistory [页码]
+  setgrouphistorylimit:
+    description: 设置群聊历史消息最大保存条数
+    usage: /setgrouphistorylimit <条数>
+    permission: message.admin
+  groupchat:
+    description: 进入群聊聊天模式
+    usage: /groupchat
+  publicchat:
+    description: 退出群聊聊天模式，恢复公屏聊天
+    usage: /publicchat

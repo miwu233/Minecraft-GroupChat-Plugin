@@ -3,6 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/Message.main.iml" filepath="$PROJECT_DIR$/.idea/modules/Message.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/New Message-main.Message.main.iml" filepath="$PROJECT_DIR$/.idea/modules/New Message-main.Message.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SLMessage.Message.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SLMessage.Message.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SlientMessage.Message.main.iml" filepath="$PROJECT_DIR$/.idea/modules/SlientMessage.Message.main.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/com.Message.main.iml" filepath="$PROJECT_DIR$/.idea/modules/com.Message.main.iml" />
     </modules>
   </component>
