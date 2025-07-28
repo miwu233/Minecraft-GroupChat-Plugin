@@ -1,4 +1,31 @@
-joinMessage: "§d欢迎§e%player%§a加入xxx！"
-quitMessage: "§7人生自古谁无死 遗憾的 §e%player%§7离开了。"
-broadcastMessage: "§e[公告]\n§b服务器QQ群627489610 可以加入我们的大家庭聊天哦~"
-deathMessage: "§d你死啦！小心一点哦~ 冷知识 聊天栏输入“/back”可以回到死亡的位置"
+# GroupChat 插件默认配置文件
+
+# 群聊最大数量
+max-groups: 10
+
+# 每个群聊最多成员数
+max-members-per-group: 100
+
+# 是否开启群聊消息保存
+enable-message-history: true
+
+# 群聊消息最大保存条数
+max-message-history: 100
+
+# 是否开启默认管理员权限
+default-admin-permission: true
+
+# 群聊命令的前缀
+command-prefix: "/"
+
+# 是否允许非管理员踢人
+allow-kick-by-nonadmin: false
+
+# 每个玩家 @提醒的冷却时间（单位：秒）
+notify-cooldown-seconds: 10
+
+# 玩家个性化提醒开关（true 表示允许被提醒）
+notify-toggle:
+  "uuid字符串": true
+  # 示例：
+  # "00000000-0000-0000-0000-000000000000": true

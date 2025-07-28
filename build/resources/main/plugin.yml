@@ -1,55 +1,11 @@
-name: SLMessage
-version: '3.1'
-main: com.Message.Message
+name: GroupChat
+version: '1.0'
+main: com.groupchat.GroupChat
 api-version: '1.21'
 author: Bicd
 description: 服务器消息插件
 
 commands:
-  setjoinmsg:
-    description: 设置欢迎消息
-    usage: /setjoinmsg <消息内容>
-    permission: message.admin
-  setquitmsg:
-    description: 设置离开消息
-    usage: /setquitmsg <消息内容>
-    permission: message.admin
-  setbroadcast:
-    description: 设置广播内容
-    usage: /setbroadcast <消息内容>
-    permission: message.admin
-  broadcastnow:
-    description: 立即发送一条广播
-    usage: /broadcastnow <内容>
-    permission: message.admin
-  broadcaststart:
-    description: 开始定时广播
-    usage: /broadcaststart <秒数>
-    permission: message.admin
-  broadcaststop:
-    description: 停止定时广播
-    usage: /broadcaststop
-    permission: message.admin
-  setdeathmsg:
-    description: 设置死亡私聊消息
-    usage: /setdeathmsg <消息内容>
-    permission: message.admin
-  setdeathreset:
-    description: 设置玩家重进后是否重置死亡提示
-    usage: /setdeathreset <on|off>
-    permission: message.admin
-  mute:
-    description: 禁言玩家
-    usage: /mute <玩家名> <时间> <原因>
-    permission: message.admin
-  unmute:
-    description: 解除禁言
-    usage: /unmute <玩家名>
-    permission: message.admin
-  fakechat:
-    description: 伪装玩家发言
-    usage: /fakechat <玩家名> <内容>
-    permission: message.admin
   creategroup:
     description: 创建群聊
     usage: /creategroup <群名>
@@ -80,23 +36,42 @@ commands:
   unsetadmin:
     description: 撤销管理员
     usage: /unsetadmin <群名> <玩家名>
-  helpmsg:
+  chathelp:
     description: 显示群聊插件指令指南
-    usage: /helpmsg
-  message:
-    description: 查看全部指令
-    usage: /message
-    permission: message.admin
+    usage: /chathelp
   grouphistory:
     description: 查看当前群聊历史消息（可分页）
     usage: /grouphistory [页码]
   setgrouphistorylimit:
     description: 设置群聊历史消息最大保存条数
     usage: /setgrouphistorylimit <条数>
-    permission: message.admin
   groupchat:
     description: 进入群聊聊天模式
     usage: /groupchat
-  publicchat:
-    description: 退出群聊聊天模式，恢复公屏聊天
-    usage: /publicchat
+  setannouncement:
+    description: 设置群公告
+    usage: /setannouncement
+  announcement:
+    description: 查看当前群聊的公告
+    usage: /announcement
+  groupmute:
+    description: 禁言群成员
+    usage: /groupmute
+  groupunmute:
+    description: 解除群成员禁言
+    usage: /groupunmute
+  renamegroup:
+    description: 修改群名称
+    usage: /renamegroup <现群名> <新群名>
+  transfergroup:
+    description: 转让群聊
+    usage: /transfergroup <群名> <新群主玩家名>
+  disbandgroup:
+    description: 解散群聊
+    usage: /disbandgroup <群名>
+  groupban:
+    description: 将玩家加入群聊黑名单
+    usage: /groupban <群名> <玩家名>
+  groupunban:
+    description: 移除玩家的群聊黑名单
+    usage: /groupunban <群名> <玩家名>
